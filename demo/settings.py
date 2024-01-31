@@ -25,12 +25,12 @@ FILE_UPLOAD_MAX_MEMORY_SIZE = 1024 * 1024 * 20  # Set to 15 megabytes (adjust as
 SECRET_KEY = 'django-insecure-!)_xef)jp)*)_m2o1op$upny&3f*if0xgta=kqvw-3uvzvipks'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.vercel.app', 'localhost']
 
 CORS_ALLOWED_ORIGINS = [
-"http://localhost:3001",
+"http://localhost:3000",
 ]
 
 # Application definition
