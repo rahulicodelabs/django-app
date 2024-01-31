@@ -1,0 +1,22 @@
+version: "3"
+services:
+    
+  pyapps:
+    build:
+      context: .  # Path to the directory containing Dockerfile
+      dockerfile: Dockerfile    # Name of your Dockerfile
+    container_name: pyapps
+    image: pyapps
+    restart: always
+    ports:
+      - "8000:8000"
+    networks:
+      - local
+      - default
+    volumes:
+    - .:/var/www/html/PROD/pyapps
+    - /var/log/pyapps/error.log:/var/log/PROD/pyapps/error.log
+
+networks:
+  local:
+    driver: bridge
